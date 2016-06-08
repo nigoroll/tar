@@ -1829,7 +1829,8 @@ dump_file0 (struct tar_stat_info *st, char const *name, char const *p)
 
       if (ok)
 	{
-	  if ((timespec_cmp (get_stat_ctime (&final_stat), original_ctime) != 0
+	  if ((! ignore_ctime_change_option &&
+	       timespec_cmp (get_stat_ctime (&final_stat), original_ctime) != 0
 	       /* Original ctime will change if the file is a directory and
 		  --remove-files is given */
 	       && !(remove_files_option && is_dir))

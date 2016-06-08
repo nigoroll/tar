@@ -2852,6 +2852,11 @@ Ignore exit codes of subprocesses. @xref{Writing to an External Program}.
 Do not exit unsuccessfully merely because an unreadable file was encountered.
 @xref{Ignore Failed Read}.
 
+@opsummary{ignore-ctime-change}
+@item --ignore-ctime-change
+
+Do not exit unsuccessfully merely because the ctime of a file changed.
+
 @opsummary{ignore-zeros}
 @item --ignore-zeros
 @itemx -i
